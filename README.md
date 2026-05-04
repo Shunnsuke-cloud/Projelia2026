@@ -19,6 +19,10 @@
 - **認証**: Supabase Auth
 - **状態管理**: React Hooks
 
+## ロゴの配置
+
+ロゴ画像は `public/brand/projelia-logo.jpeg` に置いてください。アプリ側はこの固定パスを参照します。
+
 ## セットアップ
 
 ### 前提条件

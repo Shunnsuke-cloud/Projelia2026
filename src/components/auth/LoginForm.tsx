@@ -50,11 +50,11 @@ export function LoginForm() {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <div className="bg-white rounded-lg shadow-md p-8">
-        <h1 className="text-2xl font-bold text-center mb-6 text-gray-900">ログイン</h1>
+      <div className="card">
+        <h1 className="text-2xl font-semibold text-center mb-6 text-slate-900">ログイン</h1>
 
         {error && (
-          <div className="mb-4 p-4 bg-red-50 text-red-700 rounded-lg text-sm">{error}</div>
+          <div className="mb-4 p-4 bg-slate-100 text-slate-700 rounded-xl text-sm">{error}</div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -70,7 +70,7 @@ export function LoginForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+              className="input-field"
               placeholder="user@example.com"
             />
           </div>
@@ -87,7 +87,7 @@ export function LoginForm() {
               value={formData.password}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+              className="input-field"
               placeholder="••••••••"
             />
           </div>
@@ -99,9 +99,9 @@ export function LoginForm() {
         </form>
 
         {/* サインアップリンク */}
-        <p className="text-center text-gray-600 mt-4">
+        <p className="text-center text-slate-600 mt-4">
           アカウントをお持ちでない場合は、{' '}
-          <Link href="/auth/signup" className="text-primary-600 hover:underline font-medium">
+          <Link href="/auth/signup" className="text-slate-800 hover:underline font-medium">
             サインアップ
           </Link>
         </p>
