@@ -8,24 +8,27 @@
   }
 
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-slate-50 text-slate-900 antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(148, 163, 184, 0.18), transparent 35%),
+      radial-gradient(circle at bottom right, rgba(203, 213, 225, 0.3), transparent 30%);
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors;
+    @apply px-4 py-2 bg-primary-700 text-white rounded-full hover:bg-primary-800 transition-colors shadow-sm;
   }
 
   .btn-secondary {
-    @apply px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300 transition-colors;
+    @apply px-4 py-2 bg-white text-slate-700 rounded-full border border-slate-200 hover:bg-slate-100 transition-colors shadow-sm;
   }
 
   .card {
-    @apply bg-white rounded-lg shadow-md p-6;
+    @apply bg-white/90 rounded-2xl shadow-sm border border-slate-200/70 p-6 backdrop-blur;
   }
 
   .input-field {
-    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none;
+    @apply w-full px-4 py-2.5 border border-slate-300 rounded-xl bg-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none;
   }
 }
